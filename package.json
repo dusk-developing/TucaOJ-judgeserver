@@ -1,0 +1,17 @@
+{
+  "name": "tucaoj-judgeserver",
+  "version": "1.0.0",
+  "description": "为TucaOJ设计的一款基于NodeJS的评测后端服务器",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "json5": "^2.2.3",
+    "path": "^0.12.7"
+  }
+}
