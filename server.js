@@ -1,7 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-const env = require("dotenv").config({ path: [".env.dev", ".env"]});
-const { getTestcases } = require("./operators/testcases");
+const env = require("dotenv").config({ path: [".env.dev", ".env"] });
+const { compileCPP } = require("./operates/compile");
+const { getTestcases } = require("./operates/testcases");
 
 const app = express();
 const PORT = env.parsed.PORT || 3000;
@@ -20,8 +21,8 @@ app.use("/testcases/get", (req, res) => {
     let baseDirectory = env.parsed.TESTCASE_BASE_DIR || "./test";
     let result = getTestcases(problemId, baseDirectory);
     return res.json(result);
-})
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
-})
+});

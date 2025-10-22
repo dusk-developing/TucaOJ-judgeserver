@@ -38,4 +38,4 @@ function getTestcases(problemId, baseDirectory) {
 }
 
 // console.log(getTestcases("P1001", "./test").testcases.at(0).input);
-module.exports = { getTestcases };
+export default { getTestcases };

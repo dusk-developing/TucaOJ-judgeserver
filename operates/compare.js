@@ -1,4 +1,4 @@
-const { normalize } = require("../extra_modules/normalize");
+import { normalize } from "../custom_modules/normalize";
 
 function readToken(str, begin) {
     let end = begin;
@@ -30,5 +30,5 @@ function compareStrict(target, user) {
     return target === user;
 }
 
-console.log(compareOutput("Hello\r\r\r\r\r\r\r\r\n \n    World", "Hello\n   \rWorld")); // true
-module.exports = { compareOutput, compareStrict };
+// console.log(compareOutput("Hello\r\r\r\r\r\r\r\r\n \n    World", "Hello\n   \rWorld")); // true
+export default { compareOutput, compareStrict };
